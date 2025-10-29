@@ -4,6 +4,7 @@ import 'package:news/home/category_details.dart/widget/sourse_name.dart';
 import 'package:news/home/news/news_widget.dart';
 import 'package:news/l10n/app_localizations.dart';
 import 'package:news/model/SourseResponse.dart';
+import '../../core/colormanager.dart';
 
 // ignore: must_be_immutable
 class SourseTabWidget extends StatefulWidget {
@@ -55,10 +56,9 @@ class _SourseTabWidgetState extends State<SourseTabWidget> {
             Expanded(
               child: widget.sourseList.isEmpty
                   ? Center(
-                child: Text(
-                  AppLocalizations.of(context)!.noSourcesFound,
-                  style: AppTextStyle.bold20(context),
-                ),
+                child:CircularProgressIndicator(
+                  color:Colormanager.gray,
+                )
               )
                   : NewsWidget(source: widget.sourseList[selesctedIndex]),
             ),
