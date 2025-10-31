@@ -53,7 +53,7 @@ class NewsItem extends StatelessWidget {
                 Expanded(
                   child: Text(
                     news.author?.isNotEmpty == true
-                        ? "By:${news.title ?? ""}"!
+                        ? "By:${news.title ?? ""}"
                         : 'Unknown Author',
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
