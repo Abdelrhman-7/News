@@ -11,7 +11,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => Applanguageprovider()),
-        ChangeNotifierProvider(create: (context) => Themeprovider()),
+        ChangeNotifierProvider(create: (context) => AppThemeProvider()),
       ],
       child: const MyApp(),
     ),
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
     var LanguageProvider = Provider.of<Applanguageprovider>(context);
-    var themeProvider = Provider.of<Themeprovider>(context);
+    var themeProvider = Provider.of<AppThemeProvider>(context);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -34,11 +34,9 @@ class MyApp extends StatelessWidget {
       locale: Locale(LanguageProvider.appLanguage),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      //  theme: AppTheme.lightTheme,
+      theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: themeProvider.appTheme == 'light'
-          ? ThemeMode.dark
-          : ThemeMode.light,
+      themeMode: themeProvider.appTheme,
     );
   }
 }

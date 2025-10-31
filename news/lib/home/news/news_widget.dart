@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news/Api/apiManager.dart';
 import 'package:news/AppStyle/AppTextStyle.dart';
+import 'package:news/home/news/news_item.dart';
 import 'package:news/model/NewsResponse.dart';
 import 'package:news/model/SourseResponse.dart';
 
@@ -87,10 +88,7 @@ class _NewsWidgetState extends State<NewsWidget> {
         return ListView.builder(
           itemCount: newsList.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(newsList[index].title ?? ''),
-              subtitle: Text(newsList[index].description ?? ''),
-            );
+            return NewsItem(news: newsList[index]);
           },
         );
       },
