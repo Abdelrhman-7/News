@@ -2,14 +2,15 @@
 
 import 'package:flutter/material.dart';
 
-class Themeprovider extends ChangeNotifier {
-  String appTheme = 'dark';
+class AppThemeProvider extends ChangeNotifier {
+  ThemeMode appTheme = ThemeMode.dark;
 
-  void changeTheme(String newTheme) {
-    if (appTheme == newTheme) {
-      return;
-    }
+  void changeThemeMode(ThemeMode newTheme) {
     appTheme = newTheme;
     notifyListeners();
+  }
+
+  bool isDarkMode() {
+    return appTheme == ThemeMode.dark;
   }
 }
