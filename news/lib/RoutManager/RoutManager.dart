@@ -5,7 +5,7 @@ import 'package:news/home/loginScreen.dart';
 
 class Routmanager {
   static const loginScreen = 'loginscreen';
-  static const homeScreen = 'loginscreen';
+  static const homeScreen = 'homeScreen';
   static const categoryDetails = 'CategoryDetails';
 
   static Map<String, WidgetBuilder> routes = {
