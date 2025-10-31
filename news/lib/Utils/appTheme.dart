@@ -47,7 +47,6 @@ class AppTheme {
       labelMedium: TextStyle(fontSize: 12, color: Colors.grey[400]),
     ),
 
-    // ✅ وهنا برضو:
     colorScheme: const ColorScheme.dark(
       primary: Colormanager.primaryDark,
       secondary: Colormanager.blue,
