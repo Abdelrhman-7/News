@@ -4,5 +4,9 @@
   "welcome": "Welcome to the News App",
   "home": "Home",
   "noSourcesFound": "No news found",
-  "general": "General"
+  "general": "General",
+  "language": "Language",
+  "@language": {
+    "description": "Label for the language selection option"
+  }
 }

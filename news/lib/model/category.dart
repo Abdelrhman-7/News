@@ -11,39 +11,39 @@ class Category {
       Category(
         id: 'general',
         titel: 'General',
-        image: isDark ? ImageAssets.generalDark : ImageAssets.generalLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
 
       Category(
         id: 'business',
         titel: 'Business',
-        image: isDark ? ImageAssets.buisnesslDark : ImageAssets.buisnessLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
       Category(
         id: 'sports',
         titel: 'Sports',
-        image: isDark ? ImageAssets.sportDark : ImageAssets.sportLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
       Category(
         id: 'technology',
         titel: 'Technology',
-        image: isDark ? ImageAssets.sportDark : ImageAssets.sportLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
       Category(
         id: 'entertainment',
         titel: 'Entertainment',
-        image: isDark ? ImageAssets.sportDark : ImageAssets.sportLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
 
       Category(
         id: 'health',
         titel: 'Health',
-        image: isDark ? ImageAssets.sportDark : ImageAssets.sportLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
       Category(
         id: 'science',
         titel: 'Science',
-        image: isDark ? ImageAssets.sportDark : ImageAssets.sportLight,
+        image: isDark ? ImageAssets.businessDark : ImageAssets.businessDark,
       ),
     ];
   }

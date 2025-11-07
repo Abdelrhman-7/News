@@ -24,7 +24,10 @@ class Categoryfragment extends StatelessWidget {
             child: Expanded(
               child: ListView.separated(
                 itemBuilder: (context, index) {
-                  return CategoryItem(category: categoryList[index]);
+                  return CategoryItem(
+                    category: categoryList[index],
+                    index: index,
+                  );
                 },
                 separatorBuilder: (context, index) {
                   return SizedBox(height: hieght * 0.02);
