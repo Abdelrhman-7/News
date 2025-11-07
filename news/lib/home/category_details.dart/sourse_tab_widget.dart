@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news/AppStyle/AppTextStyle.dart';
 import 'package:news/home/category_details.dart/widget/sourse_name.dart';
 import 'package:news/home/news/news_widget.dart';
-import 'package:news/l10n/app_localizations.dart';
 import 'package:news/model/SourseResponse.dart';
 import '../../core/colormanager.dart';
 
@@ -22,14 +20,6 @@ class _SourseTabWidgetState extends State<SourseTabWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          AppLocalizations.of(context)!.general,
-          style: AppTextStyle.bold20(context),
-        ),
-      ),
-
       body: DefaultTabController(
         length: widget.sourseList.length,
         child: Column(

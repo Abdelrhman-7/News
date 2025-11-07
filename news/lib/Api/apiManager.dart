@@ -1,7 +1,7 @@
 // ignore: unused_import
 // ignore_for_file: unused_local_variable
 
-import  'dart:convert';
+import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:news/Api/ApiConstant.dart';
 import 'package:news/Api/endPoints.dart';
@@ -12,9 +12,10 @@ class ApiManager {
   //https://newsapi.org/v2/top-headlines/sources?apiKey=ec57e46841614903bd452a2c00b67e24
   //https://newsapi.org/v2/everything?q=bitcoin&apiKey=ec57e46841614903bd452a2c00b67e24
 
-  static Future<SourseResponse> getSourse() async {
+  static Future<SourseResponse> getSourse({required String categoryId}) async {
     Uri url = Uri.https(ApiConstant.baseUrl, Endpoints.soirseApi, {
       'apiKey': ApiConstant.apiKey,
+      'category': categoryId,
     });
     try {
       var response = await http.get(url);

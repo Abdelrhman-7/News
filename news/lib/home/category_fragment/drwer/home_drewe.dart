@@ -7,14 +7,15 @@ import 'package:news/home/category_fragment/drwer/widget/drewer_item.dart';
 import 'package:news/home/category_fragment/drwer/widget/theme/theme_config.dart';
 import 'package:news/l10n/app_localizations.dart';
 import 'package:news/provider/appLanguageProvider.dart';
-import 'package:news/provider/themeProvider.dart';
 import 'package:provider/provider.dart';
+
+// ignore: camel_case_types
+typedef OnDrawerItemClick = void Function();
 
 // ignore: must_be_immutable
 class HomeDrewe extends StatelessWidget {
-  HomeDrewe({super.key});
-  List<AppThemeProvider> theme = [];
-  List<Applanguageprovider> language = [];
+  OnDrawerItemClick onDrawerItemClick;
+  HomeDrewe({super.key, required this.onDrawerItemClick});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,12 @@ class HomeDrewe extends StatelessWidget {
           ),
         ),
 
-        DrewerItem(iconName: ImageAssets.home, text: "Go To Home"),
+        InkWell(
+          onTap: () {
+            onDrawerItemClick();
+          },
+          child: DrewerItem(iconName: ImageAssets.home, text: "Go To Home"),
+        ),
         DividerItem(),
 
         DrewerItem(iconName: ImageAssets.theme, text: "Theme"),
