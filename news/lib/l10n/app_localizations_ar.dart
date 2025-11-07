@@ -16,5 +16,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get home => 'الصفحة الرئيسية';
-  String get noSourcesFound =>"لا يوجد اي اخبار";
+
+  @override
+  String get noSourcesFound => 'لا يوجد أي أخبار';
+
+  @override
+  String get general => 'عام';
+
+  @override
+  String get language => 'Language';
 }

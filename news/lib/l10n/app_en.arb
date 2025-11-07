@@ -1,7 +1,12 @@
 {
   "@@locale": "en",
   "title": "News App",
-  "welcome": "Welcome to our News App",
-  "home":"Home",
-  "noSourcesFound":"noSourcesFound"
+  "welcome": "Welcome to the News App",
+  "home": "Home",
+  "noSourcesFound": "No news found",
+  "general": "General",
+  "language": "Language",
+  "@language": {
+    "description": "Label for the language selection option"
+  }
 }

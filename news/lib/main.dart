@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: Routmanager.routes,
-      initialRoute: Routmanager.categoryDetails,
+      initialRoute: Routmanager.homeScreen,
       locale: Locale(LanguageProvider.appLanguage),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

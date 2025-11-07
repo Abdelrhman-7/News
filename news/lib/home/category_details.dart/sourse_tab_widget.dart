@@ -25,7 +25,7 @@ class _SourseTabWidgetState extends State<SourseTabWidget> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          AppLocalizations.of(context)!.home,
+          AppLocalizations.of(context)!.general,
           style: AppTextStyle.bold20(context),
         ),
       ),
@@ -34,7 +34,6 @@ class _SourseTabWidgetState extends State<SourseTabWidget> {
         length: widget.sourseList.length,
         child: Column(
           children: [
-
             TabBar(
               onTap: (index) {
                 setState(() {
@@ -56,10 +55,10 @@ class _SourseTabWidgetState extends State<SourseTabWidget> {
             Expanded(
               child: widget.sourseList.isEmpty
                   ? Center(
-                child:CircularProgressIndicator(
-                  color:Colormanager.gray,
-                )
-              )
+                      child: CircularProgressIndicator(
+                        color: Colormanager.gray,
+                      ),
+                    )
                   : NewsWidget(source: widget.sourseList[selesctedIndex]),
             ),
           ],

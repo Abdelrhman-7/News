@@ -12,9 +12,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get title => 'News App';
 
   @override
-  String get welcome => 'Welcome to our News App';
+  String get welcome => 'Welcome to the News App';
 
   @override
   String get home => 'Home';
-  String get noSourcesFound =>"noSourcesFound";
+
+  @override
+  String get noSourcesFound => 'No news found';
+
+  @override
+  String get general => 'General';
+
+  @override
+  String get language => 'Language';
 }
