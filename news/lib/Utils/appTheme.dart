@@ -35,7 +35,7 @@ class AppTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: Colors.black,
     splashColor: Colormanager.white,
-    primaryColor: Colormanager.primaryDark,
+    primaryColor: Colormanager.white,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.black,
       foregroundColor: Colors.white,

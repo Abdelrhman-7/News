@@ -19,9 +19,16 @@ class DrewerItem extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: width * 0.04),
-          Image.asset(iconName),
+          Image.asset(iconName, color: Theme.of(context).primaryColor),
           SizedBox(width: width * 0.02),
-          Text(text, style: Theme.of(context).textTheme.bodyLarge),
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
           SizedBox(width: width * 0.02),
         ],
       ),

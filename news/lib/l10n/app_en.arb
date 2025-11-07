@@ -3,10 +3,15 @@
   "title": "News App",
   "welcome": "Welcome to the News App",
   "home": "Home",
-  "noSourcesFound": "No news found",
+  "noSourcesFound": "No news sources found",
   "general": "General",
   "language": "Language",
+  "theme": "Theme",
+  "english":"English",
+  "arabic":"arbic",
+  "dark":"dark",
+  "light":"light",
   "@language": {
-    "description": "Label for the language selection option"
+    "description": "Label for language selection in settings"
   }
 }

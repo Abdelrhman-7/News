@@ -116,7 +116,7 @@ abstract class AppLocalizations {
   /// No description provided for @noSourcesFound.
   ///
   /// In en, this message translates to:
-  /// **'No news found'**
+  /// **'No news sources found'**
   String get noSourcesFound;
 
   /// No description provided for @general.
@@ -125,11 +125,41 @@ abstract class AppLocalizations {
   /// **'General'**
   String get general;
 
-  /// Label for the language selection option
+  /// Label for language selection in settings
   ///
   /// In en, this message translates to:
   /// **'Language'**
   String get language;
+
+  /// No description provided for @theme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get theme;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @arabic.
+  ///
+  /// In en, this message translates to:
+  /// **'arbic'**
+  String get arabic;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'dark'**
+  String get dark;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'light'**
+  String get light;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
