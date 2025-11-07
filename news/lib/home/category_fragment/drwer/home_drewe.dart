@@ -7,6 +7,7 @@ import 'package:news/home/category_fragment/drwer/widget/drewer_item.dart';
 import 'package:news/provider/appLanguageProvider.dart';
 import 'package:news/provider/themeProvider.dart';
 
+// ignore: must_be_immutable
 class HomeDrewe extends StatelessWidget {
   HomeDrewe({super.key});
   List<AppThemeProvider> theme = [];
@@ -15,7 +16,7 @@ class HomeDrewe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var hieght = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    //var width = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Container(
