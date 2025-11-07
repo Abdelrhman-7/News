@@ -5,6 +5,8 @@
   "home": "الصفحة الرئيسية",
   "noSourcesFound": "لا يوجد أي أخبار",
   "general": "عام",
-  "Language":"اللغة"
- 
+  "language": "اللغة",
+  "@language": {
+    "description": "تسمية اختيار اللغة في الإعدادات"
+  }
 }
