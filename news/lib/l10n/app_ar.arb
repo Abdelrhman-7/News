@@ -6,6 +6,11 @@
   "noSourcesFound": "لا يوجد أي أخبار",
   "general": "عام",
   "language": "اللغة",
+  "theme": "السمة",
+  "english":"الانجليزية",
+  "arabic":"عربي",
+  "dark":"ليلي",
+  "light":"نهاري",
   "@language": {
     "description": "تسمية اختيار اللغة في الإعدادات"
   }

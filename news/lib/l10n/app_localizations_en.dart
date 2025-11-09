@@ -18,11 +18,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get home => 'Home';
 
   @override
-  String get noSourcesFound => 'No news found';
+  String get noSourcesFound => 'No news sources found';
 
   @override
   String get general => 'General';
 
   @override
   String get language => 'Language';
+
+  @override
+  String get theme => 'Theme';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get arabic => 'arbic';
+
+  @override
+  String get dark => 'dark';
+
+  @override
+  String get light => 'light';
 }

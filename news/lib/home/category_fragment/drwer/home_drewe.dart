@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:news/core/assetsmanager.dart';
 import 'package:news/core/colormanager.dart';
-import 'package:news/home/category_fragment/drwer/widget/app_config.dart';
+import 'package:news/home/category_fragment/drwer/widget/language/language_config.dart';
 import 'package:news/home/category_fragment/drwer/widget/divider_item.dart';
 import 'package:news/home/category_fragment/drwer/widget/drewer_item.dart';
+import 'package:news/home/category_fragment/drwer/widget/theme/theme_config.dart';
+import 'package:news/l10n/app_localizations.dart';
 import 'package:news/provider/appLanguageProvider.dart';
-import 'package:news/provider/themeProvider.dart';
+import 'package:provider/provider.dart';
+
+// ignore: camel_case_types
+typedef OnDrawerItemClick = void Function();
 
 // ignore: must_be_immutable
 class HomeDrewe extends StatelessWidget {
-  HomeDrewe({super.key});
-  List<AppThemeProvider> theme = [];
-  List<Applanguageprovider> language = [];
+  OnDrawerItemClick onDrawerItemClick;
+  HomeDrewe({super.key, required this.onDrawerItemClick});
 
   @override
   Widget build(BuildContext context) {
+    var languageProvider = Provider.of<Applanguageprovider>(context);
+    //  var themeProvider = Provider.of<AppThemeProvider>(context);
     var hieght = MediaQuery.of(context).size.height;
-    //var width = MediaQuery.of(context).size.width;
+
     return Column(
       children: [
         Container(
@@ -30,15 +36,21 @@ class HomeDrewe extends StatelessWidget {
           ),
         ),
 
-        DrewerItem(iconName: ImageAssets.home, text: "Go To Home"),
-        DividerItem(),
-        DrewerItem(iconName: ImageAssets.theme, text: "Theme"),
-        AppConfig(),
-        SizedBox(height: hieght * 0.01),
+        InkWell(
+          onTap: () {
+            onDrawerItemClick();
+          },
+          child: DrewerItem(iconName: ImageAssets.home, text: "Go To Home"),
+        ),
         DividerItem(),
 
+        DrewerItem(iconName: ImageAssets.theme, text: "Theme"),
+        ThemeConfig(text: AppLocalizations.of(context)!.theme),
+        SizedBox(height: hieght * 0.01),
+
+        DividerItem(),
         DrewerItem(iconName: ImageAssets.globle, text: "Language"),
-        AppConfig(),
+        LanguageConfig(text: languageProvider.appLanguage),
       ],
     );
   }

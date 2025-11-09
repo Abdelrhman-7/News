@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:news/home/category_fragment/category_item.dart';
 import 'package:news/model/category.dart';
 
+typedef OnCategoryItemClick = void Function(Category);
+
+// ignore: must_be_immutable
 class Categoryfragment extends StatelessWidget {
-  const Categoryfragment({super.key});
+  OnCategoryItemClick onCategoryItemClick;
+
+  Categoryfragment({super.key, required this.onCategoryItemClick});
   static List<Category> categoryList = [];
+
   @override
   Widget build(BuildContext context) {
     var hieght = MediaQuery.of(context).size.height;
@@ -24,9 +30,14 @@ class Categoryfragment extends StatelessWidget {
             child: Expanded(
               child: ListView.separated(
                 itemBuilder: (context, index) {
-                  return CategoryItem(
-                    category: categoryList[index],
-                    index: index,
+                  return InkWell(
+                    onTap: () {
+                      onCategoryItemClick(categoryList[index]);
+                    },
+                    child: CategoryItem(
+                      category: categoryList[index],
+                      index: index,
+                    ),
                   );
                 },
                 separatorBuilder: (context, index) {
