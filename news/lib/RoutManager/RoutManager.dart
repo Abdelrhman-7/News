@@ -12,5 +12,7 @@ class Routmanager {
     // ignore: non_constant_identifier_names
     homeScreen: (Context) => HomeScreen(),
     // ignore: equal_keys_in_map, non_constant_identifier_names
+    loginScreen: (Context) => Loginscreen(),
+    // categoryDetails: (context) => CategoryDetails(category: widget.category.id,),
   };
 }

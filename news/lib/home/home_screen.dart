@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news/core/colormanager.dart';
-import 'package:news/home/category_details.dart/category_details.dart';
 import 'package:news/home/category_fragment/categoryfragment.dart';
 import 'package:news/home/category_fragment/drwer/home_drewe.dart';
 import 'package:news/l10n/app_localizations.dart';
 import 'package:news/model/category.dart';
 
-// ignore: must_be_immutable
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
@@ -23,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           selectedCategory == null
               ? AppLocalizations.of(context)!.home
-              : selectedCategory!.id,
+              : selectedCategory!.titel,
 
           style: Theme.of(context).textTheme.bodyLarge,
         ),
