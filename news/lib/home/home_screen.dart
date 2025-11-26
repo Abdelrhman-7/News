@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:news/core/colormanager.dart';
-import 'package:news/home/category_details.dart/category_details.dart';
 import 'package:news/home/category_fragment/categoryfragment.dart';
 import 'package:news/home/category_fragment/drwer/home_drewe.dart';
 import 'package:news/l10n/app_localizations.dart';
 import 'package:news/model/category.dart';
 
-// ignore: must_be_immutable
-class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
