@@ -5,7 +5,9 @@ import 'package:news/home/category_fragment/drwer/home_drewe.dart';
 import 'package:news/l10n/app_localizations.dart';
 import 'package:news/model/category.dart';
 
-class HomeScreen extends StatelessWidget {
+import 'category_details.dart/category_details.dart';
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
