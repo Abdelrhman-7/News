@@ -42,4 +42,15 @@ class ApiManager {
       rethrow;
     }
   }
+
+  static Future<NewsResponse> getNewsByCategory(String categoryId) async {
+    Uri uri = Uri.https(ApiConstant.baseUrl, Endpoints.topHeadlinesApi, {
+      'apiKey': ApiConstant.apiKey,
+      'category': categoryId,
+      'country': 'us', // لازم تحدد دولة عشان يرجع أخبار
+    });
+    var response = await http.get(uri);
+    var json = jsonDecode(response.body);
+    return NewsResponse.fromJson(json);
+  }
 }

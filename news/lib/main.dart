@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:news/RoutManager/RoutManager.dart';
 import 'package:news/Utils/appTheme.dart';
+import 'package:news/Utils/search_screen.dart';
 import 'package:news/home/home_screen.dart';
 import 'package:news/home/news_details.dart';
 import 'package:news/l10n/app_localizations.dart';
 import 'package:news/model/NewsResponse.dart';
+import 'package:news/model/category.dart';
 import 'package:news/provider/appLanguageProvider.dart';
 import 'package:news/provider/themeProvider.dart';
 import 'package:provider/provider.dart';
@@ -37,6 +39,11 @@ class MyApp extends StatelessWidget {
         Routmanager.newsdetails: (context) {
           News news = ModalRoute.of(context)!.settings.arguments as News;
           return NewsDetails(news: news);
+        },
+        Routmanager.search: (context) {
+          Category category =
+              ModalRoute.of(context)!.settings.arguments as Category;
+          return SearchScreen(category: category, news: News);
         },
       },
       initialRoute: Routmanager.homeScreen,
