@@ -1,7 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:news/Bottomsheet/bottomSheet.dart';
 import 'package:news/core/colormanager.dart';
 import 'package:news/model/NewsResponse.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 // ignore: must_be_immutable
 class NewsItem extends StatelessWidget {
@@ -42,9 +43,14 @@ class NewsItem extends StatelessWidget {
               ),
             ),
             SizedBox(height: hieght * 0.02),
-            Text(
-              news.title ?? "",
-              style: Theme.of(context).textTheme.bodyLarge,
+            InkWell(
+              onTap: () {
+                showNewsBottomSheet(context);
+              },
+              child: Text(
+                news.title ?? "",
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
             ),
             SizedBox(height: hieght * 0.02),
             Row(
@@ -68,6 +74,13 @@ class NewsItem extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void showNewsBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => Bottomsheet(news: news),
     );
   }
 }

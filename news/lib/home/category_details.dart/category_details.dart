@@ -4,9 +4,11 @@ import 'package:news/AppStyle/AppTextStyle.dart';
 import 'package:news/core/colormanager.dart';
 import 'package:news/home/category_details.dart/sourse_tab_widget.dart';
 import 'package:news/model/SourseResponse.dart';
+import 'package:news/model/category.dart';
 
 class CategoryDetails extends StatefulWidget {
-  const CategoryDetails({super.key});
+  const CategoryDetails({super.key, required this.category});
+  final Category category;
 
   @override
   State<CategoryDetails> createState() => _CategoryDetailsState();
@@ -18,7 +20,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
     var height = MediaQuery.of(context).size.height;
     var _ = MediaQuery.of(context).size.width;
     return FutureBuilder<SourseResponse>(
-      future: ApiManager.getSourse(),
+      future: ApiManager.getSourse(categoryId: widget.category.id),
       builder: (context, snapshot) {
         //todo:loding
         if (snapshot.connectionState == ConnectionState.waiting) {
@@ -39,7 +41,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     backgroundColor: Colormanager.blue,
                   ),
                   onPressed: () {
-                    ApiManager.getSourse();
+                    ApiManager.getSourse(categoryId: widget.category.id);
                     setState(() {});
                   },
                   child: Text("try Again", style: AppTextStyle.bold20(context)),
@@ -61,7 +63,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     backgroundColor: Colormanager.blue,
                   ),
                   onPressed: () {
-                    ApiManager.getSourse();
+                    ApiManager.getSourse(categoryId: widget.category.id);
                     setState(() {});
                   },
 

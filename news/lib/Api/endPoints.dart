@@ -1,8 +1,10 @@
 class Endpoints {
-  //https://newsapi.org/v2/top-headlines/sources?apiKey=ec57e46841614903bd452a2c00b67e24
-  static const String soirseApi = 'v2/top-headlines/sources/'; //name
+  // مصادر الأخبار
+  static const String soirseApi = '/v2/top-headlines/sources';
 
-  //https://newsapi.org/v2/everything?q=bitcoin&apiKey=ec57e46841614903bd452a2c00b67e24
-  static const String newsApi = '/v2/everything/';
-  //name
+  // الأخبار الرئيسية حسب الدولة أو التصنيف
+  static const String topHeadlinesApi = '/v2/top-headlines';
+
+  // بحث شامل بالكلمات المفتاحية
+  static const String newsApi = '/v2/everything';
 }

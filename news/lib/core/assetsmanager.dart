@@ -1,18 +1,14 @@
 class ImageAssets {
   static String base = "assets/image";
-  static final titelImage = "$base/appbarimage.png";
-  static final logo = "$base/Logo.png";
-  static final resetpasswor = "$base/change-setting (1).png";
-  static final gaming = "$base/gaming.png";
-  static final birthday = "$base/Birthday.png";
-  static final meeting = "$base/meeting.png";
-  static final holiday = "$base/holiday.png";
-  static final workshop = "$base/workshop.png";
-  // ignore: non_constant_identifier_names
-  static final sport = "$base/Sport (1).png";
-  static final eating = "$base/eating (1).png";
-  static final exhibition = "$base/exhibition.png";
-  static final bookclub = "$base/book_club.png";
-  static final splashlogo = "$base/Group 2.png";
-  static final splash = "$base/Logo (1).png";
+  static String businessDark = "$base/businessLight.png";
+  static String home = "$base/Home 1.png";
+  static String globle = "$base/globe-alt.png";
+  static String theme = "$base/roller-paint-brush.png";
+  static String globle2 = "$base/earth.png";
+  static String business = "$base/Business.png";
+  static final String sport = "$base/Lionel Messi - FootyRenders 1.png";
+  static String electronic = "$base/electonic.png";
+  static String medical = "$base/199125ee915cc7893e4834f8422b7ba6 1.png";
+  static String popcorn = "$base/PopcornTime Logo transparency 1.png";
+  static String lab = "$base/80ffa6d45d95ed37663f03cd7b275352 1.png";
 }
